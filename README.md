@@ -10,13 +10,13 @@ Sensing Time: 27-JUL-2006 08:38:59.842000
  - Numpy
  - Matplotlib
 ## Test Image
-- ![input_rgb.png](images/input.PNG)
+ ![input_rgb.png](images/input.PNG)
 
 
 ## Normalized Difference Vegetation Index (NDVI)
 
-- ![ndvi.png](images/ndvi.pn)
+ ![ndvi.png](images/ndvi.png)
 
 ## Output Image
- - ![output.png](images/output.PNG)
+  ![output.png](images/output.PNG)
 
