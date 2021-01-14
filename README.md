@@ -24,7 +24,10 @@ The following libraries were used while writing the Python code;
  - Matplotlib
  
  Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as red and nir. With
-```Python  ndvi = es.normalized_diff(nir, red)``` code, the process continue.
+ 
+```Python  ndvi = es.normalized_diff(nir, red)``` 
+
+code, the process continue.
  
  ## Normalized Difference Vegetation Index (NDVI)
 
@@ -36,9 +39,11 @@ NDVI is used to quantify vegetation greenness and is useful in understanding veg
 
 After display settings, output as shown:
 
-resim
+![codeoutput.PNG](images/codeoutput.PNG)
 
 ## Output Image
+
+At this stage, the output image call with this code as a single band
  
 ```Python 
    meta = image.profile
@@ -50,6 +55,8 @@ with rasterio.open('NDVI.tif', 'w', **meta) as file:
       file.close()
 ```
 
-At this stage, the output image call with this code as a single band.
+If the created tiff file is opened with the help of the software, the following image is obtained:
 
  ![output.png](images/output.PNG)
+ 
+Analysis can be made about the vegetation with the resulting image. In this image, the waters appear as dark, vegetation appear as bright areas.
