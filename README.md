@@ -14,6 +14,17 @@ Satellite image of the province of Bursa was used for this study.
 
 
  ![input_rgb.png](images/input.PNG)
+  
+## Libraries 
+The following libraries were used while writing the Python code;
+
+ - Earthpy
+ - Rasterio
+ - Numpy
+ - Matplotlib
+ 
+ Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as red and nir. With
+```Python  ndvi = es.normalized_diff(nir, red)``` code, the process continue.
  
  ## Normalized Difference Vegetation Index (NDVI)
 
@@ -23,15 +34,22 @@ NDVI is used to quantify vegetation greenness and is useful in understanding veg
 
 - In Landsat 4-7, NDVI = (Band 4 – Band 3) / (Band 4 + Band 3).
 
-## Libraries 
-The following libraries were used while writing the Python code;
+After display settings, output as shown:
 
- - Earthpy
- - Rasterio
- - Numpy
- - Matplotlib
-
+resim
 
 ## Output Image
-  ![output.png](images/output.PNG)
+ 
+```Python 
+   meta = image.profile
+meta.update(driver='GTiff')
+meta.update(count= 1)
 
+with rasterio.open('NDVI.tif', 'w', **meta) as file:
+      file.write(ndvi, 1)
+      file.close()
+```
+
+At this stage, the output image call with this code as a single band.
+
+ ![output.png](images/output.PNG)
