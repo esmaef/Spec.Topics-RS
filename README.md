@@ -10,19 +10,13 @@ Sensing Time: 27-JUL-2006 08:38:59.842000
  - Numpy
  - Matplotlib
 ## Test Image
- resim
+- ![input_rgb.png](images/input_rgb.png)
 
-*******************************
+
 ## Normalized Difference Vegetation Index (NDVI)
 
-resim
+- ![ndvi.png](images/ndvi.png)
 
 ## Output Image
-resim
+ - ![output.png](images/output.png)
 
-
-
-
-
-- ![ITU_LOGO](logo/ITU_logo.png)
-- ![UHUZAM_LOGO](logo/UHUZAM_logo.png)
