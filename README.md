@@ -23,13 +23,12 @@ The following libraries were used while writing the Python code;
  - Numpy
  - Matplotlib
  
- Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as green and nir. With
+ Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as green and nir. With given code, the process continue.
  
 ```Python
 ndwi = es.normalized_diff(green, nir)
 ``` 
 
-code, the process continue.
  
  ## Normalized Difference Water Index (NDWI)
 
