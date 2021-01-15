@@ -26,7 +26,7 @@ The following libraries were used while writing the Python code;
  Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as green and nir. With
  
 ```Python
-ndvi = es.normalized_diff(green, nir)
+ndwi = es.normalized_diff(green, nir)
 ``` 
 
 code, the process continue.
