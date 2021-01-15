@@ -25,7 +25,9 @@ The following libraries were used while writing the Python code;
  
  Landsat 5 input image (a tiff file) call with related library. Then,  names of bands assign from test image as green and nir. With
  
-```Python  ndvi = es.normalized_diff(green, nir)``` 
+```Python
+ndvi = es.normalized_diff(green, nir)
+``` 
 
 code, the process continue.
  
@@ -35,7 +37,7 @@ code, the process continue.
  
 NDWI is used to monitor changes in water content in water bodies. As water bodies absorb light strongly in the visible infrared electromagnetic spectrum, NDWI uses green and near infrared bands to highlight water bodies. The index was proposed by 1996 McFeeters.
 
-- In Landsat 5, NDVI = (Band 2 – Band 4) / (Band 2 + Band 4).
+- In Landsat 5, NDWI = (Band 2 – Band 4) / (Band 2 + Band 4).
 
 After display settings, output as shown:
 
@@ -51,7 +53,7 @@ meta.update(driver='GTiff')
 meta.update(count= 1)
 
 with rasterio.open('NDWI.tif', 'w', **meta) as file:
-      file.write(ndvi, 1)
+      file.write(ndwi, 1)
       file.close()
 ```
 
